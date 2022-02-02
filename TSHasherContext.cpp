@@ -563,7 +563,7 @@ void TSHasherContext::run_kernel_loop(DeviceContext* dev_ctx) {
       // no throttling: we aim for maximum performance
       // we sleep for the recent minimal time (slightly damped) needed to execute the kernel
       // this reduces cpu load significantly
-      std::this_thread::sleep_for(dev_ctx->getRecentMinTime() * 0.9);
+      //std::this_thread::sleep_for(dev_ctx->getRecentMinTime() * 0.9);
     }
     else if (dev_ctx->devicetype != CL_DEVICE_TYPE_CPU) {
       // throttling: we aim for reduced cpu load
